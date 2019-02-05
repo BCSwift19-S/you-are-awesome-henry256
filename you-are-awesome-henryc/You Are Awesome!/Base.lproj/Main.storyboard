@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="You_Are_Awesome_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O93-pt-YtM">
+                                <rect key="frame" x="255" y="82" width="104" height="30"/>
+                                <state key="normal" title="Show Message"/>
+                                <connections>
+                                    <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FtQ-Tj-NO9"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MMr-h5-4Nr">
+                                <rect key="frame" x="16" y="150" width="343" height="321"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bv0-1O-JqS">
+                                <rect key="frame" x="16" y="87" width="96" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="tLa-b8-pp5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UF8-1C-B06">
+                                <rect key="frame" x="106" y="82" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="wSs-xW-nih"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5y-2g-kmm">
+                                <rect key="frame" x="98" y="544" width="163" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="3dV-g0-v7t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H5y-2g-kmm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="162-yf-euj"/>
+                            <constraint firstItem="H5y-2g-kmm" firstAttribute="centerX" secondItem="MMr-h5-4Nr" secondAttribute="centerX" id="5Eg-xx-E2F"/>
+                            <constraint firstItem="bv0-1O-JqS" firstAttribute="centerY" secondItem="UF8-1C-B06" secondAttribute="centerY" id="5am-KW-1C6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MMr-h5-4Nr" secondAttribute="bottom" constant="64" id="AWW-55-hec"/>
+                            <constraint firstItem="bv0-1O-JqS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Kkw-oR-d5g"/>
+                            <constraint firstItem="UF8-1C-B06" firstAttribute="top" secondItem="H5y-2g-kmm" secondAttribute="bottom" constant="8" symbolic="YES" id="PRx-51-FlV"/>
+                            <constraint firstItem="H5y-2g-kmm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="Plf-dO-GNP"/>
+                            <constraint firstItem="O93-pt-YtM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="T75-ES-dIO"/>
+                            <constraint firstItem="UF8-1C-B06" firstAttribute="top" secondItem="O93-pt-YtM" secondAttribute="top" id="U6l-8a-QLY"/>
+                            <constraint firstItem="O93-pt-YtM" firstAttribute="trailing" secondItem="MMr-h5-4Nr" secondAttribute="trailing" id="VHI-aj-4EH"/>
+                            <constraint firstItem="bv0-1O-JqS" firstAttribute="top" secondItem="H5y-2g-kmm" secondAttribute="bottom" constant="13" id="oVK-rk-gtj"/>
+                            <constraint firstItem="MMr-h5-4Nr" firstAttribute="top" secondItem="UF8-1C-B06" secondAttribute="bottom" constant="37" id="rT1-gS-Ubd"/>
+                            <constraint firstItem="H5y-2g-kmm" firstAttribute="leading" secondItem="UF8-1C-B06" secondAttribute="leading" id="tMQ-pr-5s6"/>
+                            <constraint firstItem="bv0-1O-JqS" firstAttribute="leading" secondItem="MMr-h5-4Nr" secondAttribute="leading" id="x4C-WZ-9jB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="awesomeImage" destination="MMr-h5-4Nr" id="Be9-cK-s0p"/>
+                        <outlet property="messageLabel" destination="H5y-2g-kmm" id="N5n-Yb-8i0"/>
+                        <outlet property="soundSwitch" destination="UF8-1C-B06" id="wTc-OU-Gkl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="125.4872563718141"/>
+        </scene>
+    </scenes>
+</document>
